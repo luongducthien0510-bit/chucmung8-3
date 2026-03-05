@@ -22,7 +22,7 @@ body{
 @keyframes glow{
     0%, 100%{
         color: #fff;
-        text-shadow: 0 0 12px #FF3B77, 0 0 50px #FF3B77, 0 0 100px #FF3B77;
+        text-shadow: 0 0 12px #F9B4BC, 0 0 50px #F9B4BC, 0 0 100px #F9B4BC;
     }
     10%, 90%{
         color: #696565;
@@ -70,12 +70,12 @@ body{
 }
 
 .description{
-    color: #FF3B77;
+    color: #F9B4BC;
 }
 
 /* Estilo para el botón */
 .button button {
-    background-color: #FF3B77; /* Fondo amarillo */
+    background-color: #F9B4BC; /* Fondo amarillo */
     border: none; /* Sin bordes */
     padding: 10px 20px; /* Ajusta el relleno según tu preferencia */
     font-size: 18px; /* Tamaño de fuente */
@@ -92,8 +92,8 @@ body{
   
   /* Efecto de resplandor al pasar el cursor sobre el botón */
   .button button:hover {
-    background-color: #d62d60; /* Cambia el color de fondo al pasar el mouse a naranja */
-    box-shadow: 0 0 10px #FF3B77, 0 0 20px #FF3B77, 0 0 30px #FF3B77; /* Efecto de resplandor amarillo */
+    background-color: #F9B4BC; /* Cambia el color de fondo al pasar el mouse a naranja */
+    box-shadow: 0 0 10px #F9B4BC, 0 0 20px #F9B4BC, 0 0 30px #F9B4BC; /* Efecto de resplandor amarillo */
   }
   
   
