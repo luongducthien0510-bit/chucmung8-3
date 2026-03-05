@@ -1348,3 +1348,104 @@ body {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
 }/*# sourceMappingURL=main.css.map */
+.hearts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  pointer-events: none;
+
+  &__heart {
+    position: absolute;
+    bottom: -10vmin;
+    left: var(--l);
+    width: 3vmin;
+    height: 3vmin;
+    background-color: #F9B4BC;
+    transform: rotate(45deg) scale(var(--s));
+    opacity: 0;
+    box-shadow: 0 0 10vmin rgba(249, 180, 188, 1);
+    animation: float-heart-ans var(--dur) var(--d) linear infinite;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 3vmin;
+      height: 3vmin;
+      background-color: #F9B4BC;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: -1.5vmin;
+      left: 0;
+    }
+
+    &::after {
+      left: -1.5vmin;
+      top: 0;
+    }
+
+    &--ring {
+      background-color: transparent;
+      box-shadow: none;
+      &::before,
+      &::after {
+        display: none;
+      }
+      
+      width: 6vmin;
+      height: 6vmin;
+      border: 0.5vmin solid rgba(249, 180, 188, 0.6);
+      border-radius: 50%;
+      transform: scale(var(--s));
+      animation: float-ring-ans var(--dur) var(--d) linear infinite;
+    }
+  }
+}
+
+@keyframes float-heart-ans {
+  0% {
+    transform: translateY(0) rotate(45deg) scale(var(--s));
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50vh) rotate(55deg) scale(var(--s));
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(25deg) scale(var(--s));
+    opacity: 0;
+  }
+}
+
+@keyframes float-ring-ans {
+  0% {
+    transform: translateY(0) scale(var(--s));
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-50vh) scale(calc(var(--s) * 1.2));
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) scale(calc(var(--s) * 1.5));
+    opacity: 0;
+  }
+}
